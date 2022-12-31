@@ -11,7 +11,7 @@ const loaderOptions = {
     oneofs: true,
 };
 
-// initializing the package definition
+
 var packageDef = protoLoader.loadSync(PROTO_PATH, loaderOptions);
 const grpcObj = grpc.loadPackageDefinition(packageDef);
 
