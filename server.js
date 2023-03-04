@@ -20,7 +20,6 @@ const server = new grpc.Server();
 
 
 server.addService(grpcObj.UserService.service, {
-        /*our protobuf message(passwordMessage) for the RetrievePasswords was Empty. */
         retrieveUsers: (userMessage, callback) => {
             const userList = UserService.retrieveUsers();
             callback(null, userList);
